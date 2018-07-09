@@ -9,7 +9,7 @@ public class ControlNivel1 : MonoBehaviour {
     //private bool haColisionadoConElJugador = false;
     public int puntosGanados = 1;
     public int puntosPerdidos = 1;
-    public int Intentos = 3;
+    public int Intentos = 1;
     //int puntaje;
     // Use this for initialization
     private void Start()

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Puntuacion : MonoBehaviour {
 
 	private int puntuacion = 0;
-    private int Intentos = 0;
+    private int Intentos = 3;
 	public TextMesh marcador;
     private string go = "GameOver";
 
@@ -30,8 +30,9 @@ public class Puntuacion : MonoBehaviour {
     }
     void GameOver(Notification notificacion) {
 
-        Intentos = Intentos - 1;
-        if (Intentos >= 3)
+        int restarIntentos = (int)notificacion.data;
+        Intentos -= restarIntentos;
+        if (Intentos >= -1)
         {
             SceneManager.LoadScene(go);
         }
