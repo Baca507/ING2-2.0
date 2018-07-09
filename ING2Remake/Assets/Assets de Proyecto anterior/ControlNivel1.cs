@@ -9,6 +9,7 @@ public class ControlNivel1 : MonoBehaviour {
     //private bool haColisionadoConElJugador = false;
     public int puntosGanados = 1;
     public int puntosPerdidos = 1;
+    public int Intentos = 3;
     //int puntaje;
     // Use this for initialization
     private void Start()
@@ -70,7 +71,8 @@ public class ControlNivel1 : MonoBehaviour {
                 incorrectSign.gameObject.SetActive(true);
                 NotificationCenter.DefaultCenter().PostNotification(this, "ReducirPuntos", puntosPerdidos);
                 Debug.Log("Respuesta Incorrecta, ha perdido 5 puntos Pase a la Siguiente Pregunta");
-            
+                NotificationCenter.DefaultCenter().PostNotification(this, "GameOver", Intentos);
+
         }
         catch (System.NullReferenceException ex)
         {
