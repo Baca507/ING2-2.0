@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SeleccionMante.unity
     guid: 8f10ae42aef134935bd07f6e2926263a
+  - enabled: 1
+    path: Assets/AgregarMant.unity
+    guid: 943a81d19b45043f681c5984eed43638
