@@ -8,6 +8,7 @@ public class ControlNivel1 : MonoBehaviour {
     public GameObject correctSign, incorrectSign;
     //private bool haColisionadoConElJugador = false;
     public int puntosGanados = 1;
+    public int puntosPerdidos = 1;
     //int puntaje;
     // Use this for initialization
     private void Start()
@@ -26,7 +27,7 @@ public class ControlNivel1 : MonoBehaviour {
         Application.Quit();
     }
 
-    public void RightAnswer(string resp)
+    public void RightAnswer()
     {
         try {
             foreach (GameObject element in Cierto)
@@ -41,24 +42,48 @@ public class ControlNivel1 : MonoBehaviour {
             {
                 element.gameObject.SetActive(true);
             }
-            if (resp == "Correcto")
-            {
                 correctSign.gameObject.SetActive(true);
                 NotificationCenter.DefaultCenter().PostNotification(this, "IncrementarPuntos", puntosGanados);
                 Debug.Log("Respuesta Correcta, ha ganado 5 puntos Pase a la Siguiente Pregunta");
-            }
-            
+
             } catch (System.NullReferenceException ex) {
             Debug.Log("ERROR DE VARIABLE NOINSTANCIADAOREFERENCIADA"+ex);
             }
 
     }
+    public void WrongAnswer()
+    {
+        try
+        {
+            foreach (GameObject element in Cierto)
+            {
+                element.gameObject.SetActive(false);
+            }
+            foreach (GameObject element in Falso)
+            {
+                element.gameObject.SetActive(false);
+            }
+            foreach (GameObject element in CiertoS)
+            {
+                element.gameObject.SetActive(true);
+            }
+                incorrectSign.gameObject.SetActive(true);
+                NotificationCenter.DefaultCenter().PostNotification(this, "ReducirPuntos", puntosPerdidos);
+                Debug.Log("Respuesta Incorrecta, ha perdido 5 puntos Pase a la Siguiente Pregunta");
+            
+        }
+        catch (System.NullReferenceException ex)
+        {
+            Debug.Log("ERROR DE VARIABLE NOINSTANCIADAOREFERENCIADA" + ex);
+        }
+
+    }
     //void OnCollisionEnter2D(Collision2D collision)
     //{
-       /* if (!haColisionadoConElJugador && collision.gameObject.tag == "Player")
-        {
-            haColisionadoConElJugador = true;
-            NotificationCenter.DefaultCenter().PostNotification(this, "IncrementarPuntos", puntosGanados);
-        }
-    }*/
+    /* if (!haColisionadoConElJugador && collision.gameObject.tag == "Player")
+     {
+         haColisionadoConElJugador = true;
+         NotificationCenter.DefaultCenter().PostNotification(this, "IncrementarPuntos", puntosGanados);
+     }
+ }*/
 }

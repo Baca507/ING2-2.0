@@ -19,10 +19,17 @@ public class ControlP1 : MonoBehaviour {
         foreach (GameObject element in Cierto)
         {
             element.gameObject.SetActive(true);
+            Debug.Log("Se confirma activacion de triger info 1");
         }
         foreach (GameObject element in Falso)
         {
             element.gameObject.SetActive(true);
+            Debug.Log("Se confirma activacion de triger info 2");
+        }
+        foreach (GameObject element in Pregunta1)
+        {
+            element.gameObject.SetActive(true);
+            Debug.Log("Se confirma activacion de triger info 3");
         }
     }
     void OnTriggerEnter2D(Collider2D other)

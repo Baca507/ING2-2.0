@@ -9,7 +9,8 @@ public class Puntuacion : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		NotificationCenter.DefaultCenter().AddObserver(this, "IncrementarPuntos");
-		ActualizarMarcador();
+        NotificationCenter.DefaultCenter().AddObserver(this, "ReducirPuntos");
+        ActualizarMarcador();
 	}
 
 	void IncrementarPuntos(Notification notificacion){
@@ -17,8 +18,14 @@ public class Puntuacion : MonoBehaviour {
 		puntuacion+=puntosAIncrementar;
 		ActualizarMarcador();
 	}
+    void ReducirPuntos(Notification notificacion)
+    {
+        int puntosAIncrementar = (int)notificacion.data;
+        puntuacion -= puntosAIncrementar;
+        ActualizarMarcador();
+    }
 
-	void ActualizarMarcador(){
+    void ActualizarMarcador(){
 		marcador.text = puntuacion.ToString();
 	}
 	

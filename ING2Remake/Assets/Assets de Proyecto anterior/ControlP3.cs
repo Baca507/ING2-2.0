@@ -27,7 +27,7 @@ public class ControlP3 : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "P3")
+        if (other.tag == "Player")
         {
             foreach (GameObject element in Cierto)
             {
@@ -47,7 +47,7 @@ public class ControlP3 : MonoBehaviour {
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "P3")
+        if (other.tag == "Player")
         {
             foreach (GameObject element in Pregunta3)
             {
