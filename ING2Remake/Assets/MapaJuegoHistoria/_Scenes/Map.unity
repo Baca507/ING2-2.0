@@ -6978,7 +6978,7 @@ MonoBehaviour:
   anim: {fileID: 724864065}
   displayMessage: 0
   displayTime: 0
-  message: Se deben realizar pruebas a lo largo de todo el ciclo del proyecto.
+  message: En el DSDM se deben realizar pruebas a lo largo de todo el ciclo del proyecto.
   MyStyle:
     m_Name: 
     m_Normal:
@@ -7188,6 +7188,7 @@ GameObject:
   - component: {fileID: 757798746}
   - component: {fileID: 757798748}
   - component: {fileID: 757798749}
+  - component: {fileID: 757798750}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Player
@@ -7378,6 +7379,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayMessage: 0
   message: Deseas salir del juego?
+--- !u!114 &757798750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 757798740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8c4d380782640c6a7c860c6d8418f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayMessage: 1
+  message: Te mueves con "W" "A" "S" "D", Interactuar con "E", click a las opciones
+    y ESC para salir
 --- !u!1 &828657406
 GameObject:
   m_ObjectHideFlags: 0
