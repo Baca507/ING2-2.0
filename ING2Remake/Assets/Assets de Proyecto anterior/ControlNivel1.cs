@@ -4,19 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ControlNivel1 : MonoBehaviour {
-    GameObject[] CiertoS, Cierto,Falso,FalsoS;
+    GameObject[] CiertoS, FalsoS;
     public GameObject correctSign, incorrectSign;
     //private bool haColisionadoConElJugador = false;
     public int puntosGanados = 1;
     public int puntosPerdidos = 1;
-    public int Intentos = 1;
+    public int Intentos = 3;
     //int puntaje;
     // Use this for initialization
     private void Start()
     {
-        Cierto = GameObject.FindGameObjectsWithTag("Cierto");
         CiertoS = GameObject.FindGameObjectsWithTag("CiertoS");
-        Falso = GameObject.FindGameObjectsWithTag("Falso");
         FalsoS = GameObject.FindGameObjectsWithTag("FalsoS");
     }
     public void Cambiarescena(string nombre)
@@ -31,21 +29,13 @@ public class ControlNivel1 : MonoBehaviour {
     public void RightAnswer()
     {
         try {
-            foreach (GameObject element in Cierto)
-            {
-                element.gameObject.SetActive(false);
-            }
-            foreach (GameObject element in Falso)
-            {
-                element.gameObject.SetActive(false);
-            }
             foreach (GameObject element in CiertoS)
             {
                 element.gameObject.SetActive(true);
             }
                 correctSign.gameObject.SetActive(true);
                 NotificationCenter.DefaultCenter().PostNotification(this, "IncrementarPuntos", puntosGanados);
-                Debug.Log("Respuesta Correcta, ha ganado 5 puntos Pase a la Siguiente Pregunta");
+            Debug.Log("Respuesta Correcta, ha ganado 5 puntos Pase a la Siguiente Pregunta");
 
             } catch (System.NullReferenceException ex) {
             Debug.Log("ERROR DE VARIABLE NOINSTANCIADAOREFERENCIADA"+ex);
@@ -56,15 +46,7 @@ public class ControlNivel1 : MonoBehaviour {
     {
         try
         {
-            foreach (GameObject element in Cierto)
-            {
-                element.gameObject.SetActive(false);
-            }
-            foreach (GameObject element in Falso)
-            {
-                element.gameObject.SetActive(false);
-            }
-            foreach (GameObject element in CiertoS)
+            foreach (GameObject element in FalsoS)
             {
                 element.gameObject.SetActive(true);
             }

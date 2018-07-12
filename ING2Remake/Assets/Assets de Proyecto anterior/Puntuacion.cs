@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 public class Puntuacion : MonoBehaviour {
 
 	private int puntuacion = 0;
-    private int Intentos = 3;
+    private int Intentos = 0;
+    private int idp=0;
 	public TextMesh marcador;
+    public TextMesh PBDT;
     private string go = "GameOver";
 
 	// Use this for initialization
@@ -30,16 +32,12 @@ public class Puntuacion : MonoBehaviour {
     }
     void GameOver(Notification notificacion) {
 
-        int restarIntentos = (int)notificacion.data;
-        Intentos -= restarIntentos;
-        if (Intentos >= -1)
-        {
-            SceneManager.LoadScene(go);
-        }
-
-        
+        Intentos = Intentos - 1;
+        //if (Intentos <= 0)
+       // {
+        //    SceneManager.LoadScene(go);
+       // quitar comentarios cuando agreguen la escena gameover }
     }
-
     void ActualizarMarcador(){
 		marcador.text = puntuacion.ToString();
 	}
