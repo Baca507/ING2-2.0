@@ -36,8 +36,9 @@ EditorBuildSettings:
     path: Assets/SNiveles.unity
     guid: b668a4029aae04adf98adacda229dd6f
   - enabled: 1
-    path: Assets/Assets de Proyecto anterior/Maze.unity
-    guid: f21a756fa7217a4448b79c820f272356
-  - enabled: 1
     path: Assets/GameOver.unity
     guid: 517e23b89d57b4e5babebab1a945c3aa
+  - enabled: 1
+    path: Assets/MapaJuegoHistoria/_Scenes/Map.unity
+    guid: 7173e073a6a3f435ab99213ca42585f3
+  m_configObjects: {}
