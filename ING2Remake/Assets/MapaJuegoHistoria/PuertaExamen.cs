@@ -40,7 +40,7 @@ public class PuertaExamen : MonoBehaviour {
         }
 		if(GUI.Button(new Rect(700,300,150,20), "si")) {
 			
-			
+			Application.LoadLevel("Sniveles");
         
         }
      }
