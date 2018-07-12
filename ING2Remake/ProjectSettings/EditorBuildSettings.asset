@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MapaJuegoHistoria/_Scenes/Map.unity
     guid: 7173e073a6a3f435ab99213ca42585f3
+  - enabled: 1
+    path: Assets/SeleccMapa.unity
+    guid: 7d67e4daaf5e8432e8147fda73cfe5cf
   m_configObjects: {}
