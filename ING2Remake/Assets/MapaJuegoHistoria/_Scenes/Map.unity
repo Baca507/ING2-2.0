@@ -7187,6 +7187,7 @@ GameObject:
   - component: {fileID: 757798747}
   - component: {fileID: 757798746}
   - component: {fileID: 757798748}
+  - component: {fileID: 757798749}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Player
@@ -7364,6 +7365,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21, y: 0.23}
   m_EdgeRadius: 0
+--- !u!114 &757798749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 757798740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3341297e02974f9daecc79374930e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayMessage: 0
+  message: Deseas salir del juego?
 --- !u!1 &828657406
 GameObject:
   m_ObjectHideFlags: 0
