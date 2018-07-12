@@ -24,7 +24,7 @@ public class Examle1 : MonoBehaviour
 
         CiertoS = GameObject.FindGameObjectsWithTag("CiertoS");
         FalsoS = GameObject.FindGameObjectsWithTag("FalsoS");
-        string conn = "URI=file:" + Application.dataPath + "/PDB.s3db"; //Path to database.
+        string conn = "URI=file:" + Application.dataPath + "/PDB2.s3db"; //Path to database.
         IDbConnection dbconn;
         dbconn = (IDbConnection)new SqliteConnection(conn);
         dbconn.Open(); //Open connection to the database.
